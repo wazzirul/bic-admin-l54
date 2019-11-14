@@ -12,23 +12,41 @@
 <body class="login">
 <div class="wrapper wrapper-login">
     <div class="container container-login animated fadeIn">
+            @if($message = Session::get('gagal'))
+            <div class="alert alert-danger alert-block">
+                <button class="close" type="button" data-dismiss="alert">x</button>
+                <strong>{{ $message }}</strong>
+            </div>
+            <br/>
+            @endif
+
+            @if($message = Session::get('alert'))
+            <div class="alert alert-warning alert-block">
+                <button class="close" type="button" data-dismiss="alert">x</button>
+                <strong>{{ $message }}</strong>
+            </div>
+            <br/>
+            @endif
         <h3 class="text-center">Sign In To Admin</h3>
         <div class="login-form">
+            <form action="/login-proses" method="post">
+                {{ csrf_field() }}
             <div class="form-group form-floating-label">
-                <input id="username" name="username" type="text" class="form-control input-border-bottom" required="">
+                <input id="username" name="username" name="username" type="text" class="form-control input-border-bottom" required>
                 <label for="username" class="placeholder">Username</label>
             </div>
             <div class="form-group form-floating-label">
-                <input id="password" name="password" type="password" class="form-control input-border-bottom" required="">
+                <input id="password" name="password" name="password" type="password" class="form-control input-border-bottom" required>
                 <label for="password" class="placeholder">Password</label>
                 <div class="show-password">
                     <i class="flaticon-interface"></i>
                 </div>
             </div>
             <div class="form-action">
-                <a href="{{route('home')}}" class="btn btn-primary btn-rounded btn-login">Sign In</a>
+                <button type="submit" class="btn btn-primary btn-rounded btn-login">Sign In</button>
             </div>
-        </div>
+            </form>
+    </div>
     </div>
     <!--END OF LOGIN PAGE END OF LOGIN PAGE END OF LOGIN PAGE END OF LOGIN PAGE-->
 
