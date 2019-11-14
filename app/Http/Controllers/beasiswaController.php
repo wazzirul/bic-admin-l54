@@ -9,6 +9,13 @@ class beasiswaController extends Controller
 {
     //
     public function index(){
+        //session login
+        if(session()->has('login')){
+            
+        }
+        else{
+            return redirect('/bic-admin/login')->with('alert','Kamu harus login dulu');
+        }
         $beasiswa = Beasiswa::all();
         return view('beasiswa',['beasiswa'=>$beasiswa]);
     }

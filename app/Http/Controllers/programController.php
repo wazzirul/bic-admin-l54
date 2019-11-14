@@ -11,6 +11,15 @@ class programController extends Controller
 {
     //index program
     public function index(){
+        //session login
+        if(session()->has('login')){
+            
+        }
+        else{
+            return redirect('/bic-admin/login')->with('alert','Kamu harus login dulu');
+        }
+
+        
         $program = program::get();
         return view('program',['program'=>$program]);
     }

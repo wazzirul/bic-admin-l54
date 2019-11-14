@@ -8,8 +8,16 @@ class pengumumanController extends Controller
 {
     //
     public function index(){
+        //session login
+        if(session()->has('login')){
+            
+        }
+        else{
+            return redirect('/bic-admin/login')->with('alert','Kamu harus login dulu');
+        }
+
         $pengumuman = Pengumuman::all();
-        return view("pengumuman");
+        return view("pengumuman",['pengumuman'=>$pengumuman]);
     }
     public function edit_pengumuman($id){
         $pengumuman = Pengumuman::find($id);

@@ -13,7 +13,7 @@ class indexController extends Controller
     //
     public function index(){
         if(session()->has('login')){
-            return view('index');
+            return redirect('/bic-admin');
         }
         else{
             return redirect('/bic-admin/login')->with('alert','Kamu harus login dulu');
