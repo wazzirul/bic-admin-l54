@@ -4,7 +4,6 @@
   padding: 20px;
   width: auto;
   max-width: 45rem;
-  -webkit-border-radius: .5rem;
   border-radius: .5rem;
   margin: 20px auto; }
   .white-popup table td {
@@ -12,14 +11,11 @@
     vertical-align: top !important; }
   .white-popup .action-confrimation {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-align-content: center;
     -ms-flex-line-pack: center;
     align-content: center;
     -webkit-box-pack: center;
-    -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center; }
 
@@ -29,19 +25,15 @@
   padding: 20px;
   width: auto;
   max-width: 25rem;
-  -webkit-border-radius: .5rem;
   border-radius: .5rem;
   margin: 20px auto; }
   .user-popup .action-confrimation {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-align-content: center;
     -ms-flex-line-pack: center;
     align-content: center;
     -webkit-box-pack: center;
-    -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center; }
 
@@ -52,45 +44,39 @@
   width: auto;
   max-width: 18rem;
   margin: 20px auto;
-  -webkit-border-radius: .5rem;
   border-radius: .5rem; }
 
 .delete-confrimation {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-content: center;
   -ms-flex-line-pack: center;
   align-content: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center; }
+
 .table-subtitle {
   overflow: hidden;
   white-space: nowrap;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
-  max-width: 150px; }
+  max-width: 100px; }
+
 .table-deskripsi {
   overflow: hidden;
   white-space: nowrap;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   max-width: 300px; }
-  
 
 .btn-form-submit {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-content: center;
   -ms-flex-line-pack: center;
   align-content: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center; }
 
@@ -131,9 +117,21 @@
 
 .nav-user {
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-align-content: center;
   -ms-flex-line-pack: center;
   align-content: center; }
+
+@media only screen and (min-width: 991.5px) {
+  .logout {
+    margin-top: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none !important;
+    color: #575962; } }
+
+.updated {
+  font-size: 16px !important; }
+
+.text-white {
+  color: white !important; }

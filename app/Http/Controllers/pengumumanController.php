@@ -9,7 +9,7 @@ class pengumumanController extends Controller
     //
     public function index(){
         $pengumuman = Pengumuman::all();
-        return view("pengumuman",['pengumuman'=>$pengumuman]);
+        return view("pengumuman");
     }
     public function edit_pengumuman($id){
         $pengumuman = Pengumuman::find($id);
