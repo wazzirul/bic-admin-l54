@@ -11,13 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return redirect('/bic-admin');
-});
+Route::get('/', 'indexController@index');
+Route::get('/bic-admin', 'indexController@home')->name('home');
+Route::post('/login-proses', 'indexController@login_proses'); //login proses
+Route::get('/bic-admin/login','indexController@login')->name('login');
+Route::get('/bic-admin/logout','indexController@logout')->name('logout');
+
+//test popup
 Route::get('/test-popup', 'test_popup@index');
-//
-Route::get('/bic-admin','bicadminController@index')->name('home');
-Route::get('/bic-admin/login','bicadminController@login')->name('login');
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////

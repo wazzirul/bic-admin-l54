@@ -23,7 +23,13 @@
                         <div class="card-title">DASHBOARD...</div>
                     </div>
                     <div class="card-body">
-                        
+                            @if($message = Session::get('sukses'))
+                            <div class="alert alert-success alert-block">
+                                <button class="close" type="button" data-dismiss="alert">x</button>
+                                <strong>{{ $message }}</strong>
+                            </div>
+                            <br/>
+                            @endif
                     </div>
                 </div>
 
