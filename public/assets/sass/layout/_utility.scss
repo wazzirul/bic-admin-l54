@@ -1,0 +1,127 @@
+//////////////////////////////////////////////////////////////////////////////
+//POP UP POP UP POP UP POP UP POP UP POP UP POP UP POP UP
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width:auto;
+  max-width: 45rem;
+  border-radius: .5rem;
+  margin: 20px auto;
+
+  table td{
+    text-align: left;
+    vertical-align: top !important;
+  }
+  .action-confrimation{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+}
+
+.user-popup {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width:auto;
+  max-width: 25rem;
+  border-radius: .5rem;
+  margin: 20px auto;
+
+  .action-confrimation{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+}
+
+
+//delete pop ip div
+.delete-popup {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width:auto;
+  max-width: 18rem;
+  margin: 20px auto;
+  border-radius: .5rem;
+}
+
+//delete pop up confrimation
+.delete-confrimation{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  
+}
+
+//deskripsi shorter
+.table-deskripsi{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 350px;
+}
+
+//form footer submit
+.btn-form-submit{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+
+
+
+
+////////////////////////////////////////////////////////////////////
+//ANIMATION POP UP
+/* overlay at start */
+.mfp-fade.mfp-bg {
+  opacity: 0;
+
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}
+///////////////////////////////////////////////////////////////////////////
+
+
+//table setting
+.table-setting{
+  padding-top:1rem;
+}
+
+
+
+//nav user nav user nav user nav user nav user
+.nav-user{
+  justify-content: center;
+  align-content: center;
+}
