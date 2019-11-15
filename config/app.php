@@ -229,7 +229,6 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Active' => Watson\Active\Facades\Active::class,
-        'AppHelper' => App\Helpers\AppHelper::class,
 
 
 
