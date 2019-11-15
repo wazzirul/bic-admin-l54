@@ -11,25 +11,47 @@ class programController extends Controller
 {
     //index program
     public function index(){
+
         //session login
         if(session()->has('login')){
-            
         }
         else{
             return redirect('/bic-admin/login')->with('alert','Kamu harus login dulu');
         }
+        //session login
 
+        
         
         $program = program::get();
         return view('program',['program'=>$program]);
     }
     //form edit
     public function edit_program($id){
+
+        //session login
+        if(session()->has('login')){
+        }
+        else{
+            return redirect('/bic-admin/login')->with('alert','Kamu harus login dulu');
+        }
+        //session login
+
+        
         $program = program::find($id);
         return view('forms/edit-program',['program'=>$program]);
     }
     //form tambah
     public function tambah_program(){
+
+        //session login
+        if(session()->has('login')){
+        }
+        else{
+            return redirect('/bic-admin/login')->with('alert','Kamu harus login dulu');
+        }
+        //session login
+
+        
         return view('forms/add-program');
     }
     //store data baru

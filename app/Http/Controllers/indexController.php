@@ -10,6 +10,9 @@ use App\Pengumuman;
 
 class indexController extends Controller
 {
+    
+
+
     //
     public function index(){
         if(session()->has('login')){
@@ -46,7 +49,12 @@ class indexController extends Controller
     }
 
     public function login(){
-        return view('login');
+        if(session()->has('login')){
+            return redirect('/bic-admin');
+        }
+        else{
+            return view('login');
+        }
     }
 
     public function logout(){

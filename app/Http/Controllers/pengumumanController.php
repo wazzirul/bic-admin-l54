@@ -8,22 +8,44 @@ class pengumumanController extends Controller
 {
     //
     public function index(){
+
         //session login
         if(session()->has('login')){
-            
         }
         else{
             return redirect('/bic-admin/login')->with('alert','Kamu harus login dulu');
         }
+        //session login
 
+        
         $pengumuman = Pengumuman::all();
         return view("pengumuman",['pengumuman'=>$pengumuman]);
     }
     public function edit_pengumuman($id){
+
+        //session login
+        if(session()->has('login')){
+        }
+        else{
+            return redirect('/bic-admin/login')->with('alert','Kamu harus login dulu');
+        }
+        //session login
+
+        
         $pengumuman = Pengumuman::find($id);
         return view('forms/edit-pengumuman',['pengumuman'=>$pengumuman]);
     }
     public function tambah_pengumuman(){
+
+        //session login
+        if(session()->has('login')){
+        }
+        else{
+            return redirect('/bic-admin/login')->with('alert','Kamu harus login dulu');
+        }
+        //session login
+
+        
         return view('forms/add-pengumuman');
     }
     //store pengumuman baru ke database

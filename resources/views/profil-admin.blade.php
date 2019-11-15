@@ -28,8 +28,8 @@
                     <div class="table-responsive">
                     <!-- <table class="table table-hover"> -->
                     <div id="admin_wrapper" class="dataTables_wrapper no-footer">
-                        <table id="admin" class="table mb-3 table-hover table-admin table-setting dataTable no-footer" style="width:100%" role="grid" aria-describedby="admin_info">
-                        <thead>
+                        <table id="admin" class="table mb-3 table-hover table-striped table-admin table-setting dataTable no-footer" style="width:100%" role="grid" aria-describedby="admin_info">
+                        <thead  class="thead-dark">
                             <tr role="row">
                                 <th scope="col" class="sorting_asc" tabindex="0" aria-controls="admin" rowspan="1" colspan="1" aria-sort="ascending" aria-label="#: activate to sort column descending">
                                     #

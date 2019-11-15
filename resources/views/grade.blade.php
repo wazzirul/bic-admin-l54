@@ -26,8 +26,8 @@
                     <!-- <table class="table table-hover"> -->
                     <div id="grade_wrapper" class="dataTables_wrapper no-footer">
                         <a class="btn btn-primary mb-3" href="{{ route('tambah-grade') }}">Tambah Grade Kampus Baru</a>
-                        <table id="grade" class="table mb-3 table-hover table-grade  table-setting dataTable no-footer" style="width:100%" role="grid" aria-describedby="grade_info">
-                        <thead>
+                        <table id="grade" class="table mb-3 table-striped table-hover table-grade  table-setting dataTable no-footer" style="width:100%" role="grid" aria-describedby="grade_info">
+                        <thead  class="thead-dark">
                             <tr role="row">
                                 <th scope="col" class="sorting_asc" tabindex="0" aria-controls="grade" rowspan="1" colspan="1" aria-sort="ascending" aria-label="#: activate to sort column descending">
                                     #

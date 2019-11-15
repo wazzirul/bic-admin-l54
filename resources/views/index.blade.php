@@ -39,7 +39,7 @@
                                         <tbody>
                                             
                                         <tr role="row" class="odd">
-                                            <td>Judul</td>
+                                            <td class="first-td">Judul</td>
                                             <td> {{ $p->judul}} </td>
                                         </tr>
                                         <tr role="row" class="even">
@@ -65,7 +65,7 @@
                                         <tbody>
                                             
                                         <tr role="row" class="odd">
-                                            <td>Judul</td>
+                                            <td class="first-td">Judul</td>
                                             <td> {{ $b->judul}} </td>
                                         </tr>
                                         <tr role="row" class="even">
@@ -95,7 +95,7 @@
                                             <tbody>
                                                 
                                             <tr role="row" class="odd">
-                                                <td>Judul</td>
+                                                <td class="first-td">Judul</td>
                                                 <td> {{ $pg->judul}} </td>
                                             </tr>
                                             <tr role="row" class="even">
