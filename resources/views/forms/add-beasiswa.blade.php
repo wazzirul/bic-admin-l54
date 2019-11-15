@@ -32,13 +32,24 @@
                         <div class="form-group">
                             <label for="subtitle">Subtitle Beasiswa</label>
                             <input type="text" class="form-control" name="subtitle" required id="subtitle" placeholder="Subtitle Beasiswa">
+                        
+                        
+                        
                         </div>
                         <div class="form-group">
                             <label for="Deskripsi">Deskripsi Beasiswa</label>
-                            <textarea class="form-control deskripsi-beasiswa" name="deskripsi" required id="deskripsi" rows="5" placeholder="Deskripsi Beasiswa"></textarea>
+                            <textarea class="form-control deskripsi-beasiswa description" name="deskripsi" id="deskripsi" rows="5" placeholder="Deskripsi Beasiswa"></textarea>
+                        
+                            
+                            @if($errors->has('deskripsi'))
+                                <div class="text-danger">
+                                    {{ $errors->first('deskripsi')}}
+                                </div>
+                            @endif
+                        
                         </div>
                         <div class="card-action btn-form-submit">
-                            <button class="btn btn-primary mr-3">Submit</button>
+                            <button type="submit" class="btn btn-primary mr-3">Submit</button>
                         </div>
                     </form>
                     </div>

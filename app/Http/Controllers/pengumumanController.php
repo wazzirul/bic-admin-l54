@@ -50,6 +50,10 @@ class pengumumanController extends Controller
     }
     //store pengumuman baru ke database
     public function store_pengumuman(Request $request){
+        $this->validate($request,[
+            'pesan' => 'required'
+        ]);
+
         Pengumuman::create([
             'judul' => $request->judul,
             'pesan' => $request->pesan
@@ -59,6 +63,10 @@ class pengumumanController extends Controller
     }
     //update data pengumuman
     public function update_pengumuman($id,Request $request){
+        $this->validate($request,[
+            'pesan' => 'required'
+        ]);
+
         $pengumuman = Pengumuman::find($id);
 
         $pengumuman->judul = $request->judul;

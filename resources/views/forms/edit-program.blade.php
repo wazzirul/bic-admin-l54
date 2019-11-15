@@ -30,7 +30,14 @@
                         </div>
                         <div class="form-group">
                             <label for="Deskripsi">Deskripsi</label>
-                            <textarea class="form-control deskripsi-program" required id="deskripsi" name="deskripsi" rows="5">{{$program->deskripsi}}</textarea>
+                            <textarea class="form-control deskripsi-program description" id="deskripsi" name="deskripsi" rows="5">{{$program->deskripsi}}</textarea>
+                       
+                            @if($errors->has('deskripsi'))
+                                <div class="text-danger">
+                                    {{ $errors->first('deskripsi')}}
+                                </div>
+                            @endif  
+                       
                         </div>
                         <div class="form-group">
                             <label for="harga">Harga Program</label>

@@ -22,6 +22,7 @@
         @yield('content')
 	</div>
 </body>
+<script src="{{ asset('assets/js/tinymce.min.js') }}"></script>
 <script src="{{ asset('assets/js/jquery-3.3.1.js') }}"></script>
 <script src="{{ asset('assets/js/core/bootstrap.min.js') }}"></script>
 <script src="{{ asset('assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js') }}"></script>
@@ -168,6 +169,20 @@
 		midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
 		
 		
+		});
+
+
+
+
+
+		////////////////////////////////////////////////////////////////////////////////
+		//TinyMCE
+
+
+		tinymce.init({
+			selector:'textarea.description',
+			width: 900,
+			height: 300
 		});
 });
 

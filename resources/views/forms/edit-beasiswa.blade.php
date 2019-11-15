@@ -35,7 +35,14 @@
                         </div>
                         <div class="form-group">
                             <label for="Deskripsi">Deskripsi Beasiswa</label>
-                            <textarea class="form-control deskripsi-beasiswa" required name="deskripsi" id="deskripsi" rows="5">{{$beasiswa->deskripsi}}</textarea>
+                            <textarea class="form-control deskripsi-beasiswa description" name="deskripsi" id="deskripsi" rows="5">{{$beasiswa->deskripsi}}</textarea>
+                        
+                            @if($errors->has('deskripsi'))
+                                <div class="text-danger">
+                                    {{ $errors->first('deskripsi')}}
+                                </div>
+                            @endif  
+                        
                         </div>
                         <div class="card-action btn-form-submit">
                             <button type="submit" class="btn btn-primary mr-3">Submit</button>

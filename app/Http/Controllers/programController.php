@@ -57,6 +57,7 @@ class programController extends Controller
     //store data baru
     public function store_program(Request $request){
         $this->validate($request,[
+            'deskripsi' => 'required',
             'harga' => 'numeric|min:0',
             'dp' => 'numeric|min:0'
         ]);
@@ -74,6 +75,7 @@ class programController extends Controller
     //update data yang diedit
     public function update_program($id,Request $request){
         $this->validate($request,[
+            'deskripsi' => 'required',
             'harga' => 'numeric|min:0',
             'dp' => 'numeric|min:0'
         ]);

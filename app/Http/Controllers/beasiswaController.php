@@ -58,14 +58,9 @@ class beasiswaController extends Controller
 
     //store data beasiswa baru
     public function store_beasiswa(Request $request){
-
-        //session login
-        if(session()->has('login')){
-        }
-        else{
-            return redirect('/bic-admin/login')->with('alert','Kamu harus login dulu');
-        }
-        //session login
+        $this->validate($request,[
+            'deskripsi' => 'required'
+        ]);
 
         
         Beasiswa::create([
@@ -79,14 +74,9 @@ class beasiswaController extends Controller
 
     //update data beasiswa
     public function update_beasiswa($id,Request $request){
-
-        //session login
-        if(session()->has('login')){
-        }
-        else{
-            return redirect('/bic-admin/login')->with('alert','Kamu harus login dulu');
-        }
-        //session login
+        $this->validate($request,[
+            'deskripsi' => 'required'
+        ]);
 
         
         $beasiswa = Beasiswa::find($id);

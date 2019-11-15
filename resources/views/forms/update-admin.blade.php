@@ -36,7 +36,7 @@
                     </div>
                 </div>
                     <div class="card-action btn-form-submit">
-                        <button class="btn btn-primary mr-3">Submit</button>
+                        <button type="submit" class="btn btn-primary mr-3">Submit</button>
                     </div>
                 </div>
             </div>

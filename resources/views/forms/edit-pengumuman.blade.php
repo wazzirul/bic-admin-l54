@@ -36,7 +36,15 @@
                         </div>
                         <div class="form-group">
                             <label for="Deskripsi">Deskripsi Pengumuman</label>
-                            <textarea class="form-control deskripsi-pengumuman" required id="deskripsi" name="pesan" rows="5">{{$pengumuman->pesan}}</textarea>
+                            <textarea class="form-control deskripsi-pengumuman description" id="deskripsi" name="pesan" rows="5">{{$pengumuman->pesan}}</textarea>
+                        
+                        
+                            @if($errors->has('pesan'))
+                                <div class="text-danger">
+                                    {{ $errors->first('pesan')}}
+                                </div>
+                            @endif 
+
                         </div>
                         <div class="card-action btn-form-submit">
                             <button type="submit" class="btn btn-primary mr-3">Submit</button>
